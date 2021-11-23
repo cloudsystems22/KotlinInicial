@@ -74,6 +74,7 @@ fun constantes(){
 }
 
 fun variaveis(){
+    //Variáveis
     var y = 10
     y = 1
     println("Tipos de variáveis $y")
@@ -95,7 +96,7 @@ fun variaveis(){
 }
 
 fun tiposDeDados(){
-
+    //Tipos de dados
     val rate: Double = 19.5 // Double
     val hours: Int = 10 // Int
     val total = rate * hours // Retorna double
@@ -166,6 +167,11 @@ fun tiposDeDados(){
     val double:Double = 1.0 // 1 byte | 15 digitos
 
     //Anit, unit, nothing
+
+    val numberAny: Any = 10
+    val textAny: Any = "10"
+
+
 
 
 }
