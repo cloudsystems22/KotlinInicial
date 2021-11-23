@@ -12,7 +12,9 @@ fun main(args: Array<String>) {
     //operadoresBasicosDois()
     //constantes()
     //variaveis()
-    tiposDeDados()
+    //tiposDeDados()
+    //forever()
+    estrturasCondicionais()
 
 }
 
@@ -171,8 +173,37 @@ fun tiposDeDados(){
     val numberAny: Any = 10
     val textAny: Any = "10"
 
+}
+
+fun add(x:Int, y:Int) : Int {
+    return x + y
+}
+
+fun forever():Nothing {
+    var cont = 0
+    while(true){
+        cont += 1
+        Thread.sleep(1000)
+        println("Função forever $cont")
+    }
+}
 
 
+fun estrturasCondicionais(){
+    // Condicionais
+    val yes = true
+    val no = false
 
+    println("Resultado 1 == 2 : ${(1 == 2)}")
+    println("Resultado 1 != 2 : ${(1 != 2)}")
+    println("Resultado 1 > 2 : ${(1 > 2)}")
+    println("Resultado 1 < 2 : ${(1 < 2)}")
+    println("Resultado 1 <= 2 : ${(1 <= 2)}")
+    println("Resultado 1 >= 2 : ${(1 >= 2)}")
+
+    val and = true && false
+    println("And true && false : $and")
+    val or = true || false
+    println("or true || false : $or")
 }
 

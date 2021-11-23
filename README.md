@@ -1,6 +1,6 @@
 # KotlinInicial
 
-###Operações aritiméticas básicas
+### Operações aritiméticas básicas
 
     println("3 + 2 = ${3 + 2}")
     println("3 - 2 = ${3 - 2}")
@@ -30,10 +30,10 @@ Utilizando o operador shift left podemos arrastar o bloco de memória
     println("Máximo entre 1 e 100 = ${max(1, 100)}")
     println("Minimo entre 1 e 100 = ${min(1, 100)}")
 
-###Algumas constantes só são entendidas fora de blocos de funçãos
+### Algumas constantes só são entendidas fora de blocos de funçãos
     const val pi:Float = 3.14159f
 
-###Tipos primitivos
+### Tipos primitivos
     val x = 300 //Integer
     val pi = 3.14159 //Double
 
@@ -41,7 +41,7 @@ Utilizando o operador shift left podemos arrastar o bloco de memória
 
     println("Tipos constantes: $x PI: $pi")
 
-###Variáveis
+### Variáveis
     var y = 10
     y = 1
     println("Tipos de variáveis $y")
@@ -61,7 +61,7 @@ Utilizando o operador shift left podemos arrastar o bloco de memória
     count *=2
     println("por 2 = $count")
 
-###Tipos de dados
+### Tipos de dados
     val rate: Double = 19.5 // Double
     val hours: Int = 10 // Int
     val total = rate * hours // Retorna double
@@ -69,7 +69,7 @@ Utilizando o operador shift left podemos arrastar o bloco de memória
     println("Retorno $total")
 
 
-####Carateres unicode
+#### Carateres unicode
 
     println("Caracter c = ${'c'.toInt()}")
     println("Caracter o = ${'o'.toInt()}")
@@ -97,7 +97,7 @@ Utilizando o operador shift left podemos arrastar o bloco de memória
 
     println(text)
 
-####Utilizando o objeto Pair, aceita qualquer tipo de dados
+#### Utilizando o objeto Pair, aceita qualquer tipo de dados
     println("------- Objeto Pair ------------------------------------")
     val coordinates = Pair(12.0002344, 23.90000090)
     println("Aceita qualquer tipo de dados $coordinates")
@@ -131,7 +131,41 @@ Utilizando o operador shift left podemos arrastar o bloco de memória
     val float:Float = 1.0f // 1 byte | 6 digitos
     val double:Double = 1.0 // 1 byte | 15 digitos
 
-####Anit, unit, nothing
+#### Anit, unit, nothing
 
     val numberAny: Any = 10
     val textAny: Any = "10"
+
+### Fuções
+
+    fun add(x:Int, y:Int) : Int {
+        return x + y
+    }
+    
+    add(10, 12)
+
+#### Utilizado normalmente para executar tarefas constantes
+    fun forever():Nothing {
+        var cont = 0
+        while(true){
+            cont += 1
+            Thread.sleep(1000)
+            println("$cont segundo(s)")
+        }
+    }
+
+#### Condicionais
+    val yes = true
+    val no = false
+
+    println("Resultado 1 == 2 : ${(1 == 2)}")
+    println("Resultado 1 != 2 : ${(1 != 2)}")
+    println("Resultado 1 > 2 : ${(1 > 2)}")
+    println("Resultado 1 < 2 : ${(1 < 2)}")
+    println("Resultado 1 <= 2 : ${(1 <= 2)}")
+    println("Resultado 1 >= 2 : ${(1 >= 2)}")
+
+    val and = true && false
+    println("And true && false : $and")
+    val or = true || false
+    println("or true || false : $or")
