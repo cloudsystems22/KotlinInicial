@@ -156,5 +156,17 @@ fun tiposDeDados(){
 
     val (x, y) = coord
     println("Objeto X: $x | Objeto Y: $y")
+
+    val byte:Byte = 1 // 1 byte
+    val short:Short = 1 // 2 bytes
+    val int:Int = 1 // 4 bytes
+    val long:Long = 1 // 8 bytes
+
+    val float:Float = 1.0f // 1 byte | 6 digitos
+    val double:Double = 1.0 // 1 byte | 15 digitos
+
+    //Anit, unit, nothing
+
+
 }
 
