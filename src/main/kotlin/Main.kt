@@ -14,7 +14,8 @@ fun main(args: Array<String>) {
     //variaveis()
     //tiposDeDados()
     //forever()
-    estrturasCondicionais()
+    //estrturasCondicionais()
+    estruturasRepeticao()
 
 }
 
@@ -205,5 +206,59 @@ fun estrturasCondicionais(){
     println("And true && false : $and")
     val or = true || false
     println("or true || false : $or")
+
+
+    var age = 24
+
+    if(age > 24){
+        println("Idade abaixo 24")
+    } else {
+        println("Acima de 24")
+    }
+
+    val retornaIdade = if(age > 28) println("Idade abaixo 28") else println("Acima")
+
+    val bankAccount = 1200
+    val product = if (bankAccount > 1900){
+        println("iPhone")
+    } else if (bankAccount > 1500){
+        println("Motorola")
+    } else if (bankAccount > 1000){
+        println("Sansung")
+    } else{
+        println("Sem grana")
+    }
+
+    when (bankAccount){
+        1900 -> println("iPhone")
+        1500 -> println("Motorola")
+        1000 -> println("Sansung")
+        else -> println("Sem grana")
+    }
 }
+
+fun estruturasRepeticao(){
+    var estados = mutableListOf("SP", "AC", "RO", "PE", "RS", "CE")
+
+    for(e in estados){
+        println("Interação estados: $e")
+    }
+
+    println("--------------------------------------")
+
+    for((i, e) in estados.withIndex()) {
+        println("Interação  Estado: $e - indice: $i")
+    }
+
+    for (i in 0..estados.size - 1){
+        println("Interação  Estado: $estados[i] - indice: $i")
+    }
+
+    for (i in 0 until estados.size){
+        println("Interação  Estado: $estados[i] - indice: $i")
+    }
+}
+
+//Single expression
+fun subtrair(a:Int, b:Int) = a - b
 
