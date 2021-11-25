@@ -1,3 +1,4 @@
+import java.security.KeyStore
 import kotlin.math.*
 
 fun main(args: Array<String>) {
@@ -7,7 +8,6 @@ fun main(args: Array<String>) {
     // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
     println("Program arguments: ${args.joinToString()}")
 
-
     //operadoresBasicosUm()
     //operadoresBasicosDois()
     //constantes()
@@ -15,7 +15,16 @@ fun main(args: Array<String>) {
     //tiposDeDados()
     //forever()
     //estrturasCondicionais()
-    estruturasRepeticao()
+    //estruturasRepeticao()
+
+    var carro = Veiculo()
+    carro.cor = "Azul"
+    carro.modelo = "Fusca"
+    carro.zeroKm = true
+
+    Veiculo.aceleral()
+
+
 
 }
 

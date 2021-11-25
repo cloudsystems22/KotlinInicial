@@ -223,3 +223,50 @@ Utilizando o operador shift left podemos arrastar o bloco de memória
 
 #### Single expression
     fun subtrair(a:Int, b:Int) = a - b 
+
+### Classes
+
+    import java.time.LocalDate
+
+    class Veiculo {
+
+        var cor:String = ""
+        var modelo:String = ""
+        var zeroKm:Boolean = true
+        var dataEntrada: LocalDate = LocalDate.now()
+
+        companion object {
+            var modelo = "chevrolet"
+            fun aceleral(){
+                println("Acelando...")
+            }
+        }
+
+    }
+
+    class Person(firstName: String) { /*...*/ }
+    
+    class InitOrderDemo(name: String) {
+        val firstProperty = "First property: $name".also(::println)
+    
+        init {
+            println("First initializer block that prints ${name}")
+        }
+    
+        val secondProperty = "Second property: ${name.length}".also(::println)
+    
+        init {
+            println("Second initializer block that prints ${name.length}")
+        }
+    }
+
+#### Heranças
+
+    open class Shape {
+        open fun draw() { /*...*/ }
+        fun fill() { /*...*/ }
+    }
+
+    class Circle() : Shape() {
+        override fun draw() { /*...*/ }
+    }
